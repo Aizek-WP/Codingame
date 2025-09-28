@@ -14,7 +14,7 @@ int main()
     int bust_threshold;
     cin >> bust_threshold; cin.ignore();
 
-    // Количество карт
+    // РєРѕР»РёС‡РµСЃС‚РІРѕ РєР°СЂС‚
     int deck[11] = { 0 };
     for (int i = 1; i <= 10; i++) {
         if (i == 1) deck[i] = 4;
@@ -30,7 +30,7 @@ int main()
         thoughts.push_back(item);
     }
 
-    // Мысли
+    // РњС‹СЃР»Рё
     for (const string& thought : thoughts) {
         bool valid = true;
 
@@ -59,7 +59,7 @@ int main()
         }
     }
 
-    // Подсчёт карт
+    // РџРѕРґСЃС‡С‘С‚ РєР°СЂС‚
     int total_remaining = 0;
     int favorable = 0;
 
@@ -70,7 +70,7 @@ int main()
         }
     }
 
-    // Вычисление процента
+    // Р’С‹С‡РёСЃР»РµРЅРёРµ РїСЂРѕС†РµРЅС‚Р°
     int percentage = 0;
     if (total_remaining > 0) {
         percentage = round((double)favorable * 100 / total_remaining);
@@ -79,4 +79,5 @@ int main()
     cout << percentage << "%" << endl;
 
     return 0;
+
 }
